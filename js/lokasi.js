@@ -1,9 +1,7 @@
-// js/lokasi.js
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('restoranGrid');
     if(!grid) return;
-    
-    fetch('data/restoran.json')
+    Promise.resolve(window.DATA_RESTORAN).then(data => ({ json: () => data }))
         .then(res => res.json())
         .then(data => {
             grid.innerHTML = '';
@@ -13,10 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.style.animation = `slideUp 0.5s ease ${idx * 0.1}s forwards`;
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
-                
                 card.innerHTML = `
                     <div class="restoran-img">
-                        <img src="${item.gambar}" alt="${item.nama}" loading="lazy">
+                        <img src="${item.gambar}" alt="${item.nama}">
                     </div>
                     <div class="restoran-info">
                         <h3>${item.nama}</h3>

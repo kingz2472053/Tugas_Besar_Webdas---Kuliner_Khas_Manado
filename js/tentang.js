@@ -1,6 +1,5 @@
-// js/tentang.js
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('data/tentang.json')
+    Promise.resolve(window.DATA_TENTANG).then(data => ({ json: () => data }))
         .then(res => res.json())
         .then(data => {
             const tlContainer = document.getElementById('timelineContainer');
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     div.style.animation = `slideUp 0.5s ease ${index * 0.2}s forwards`;
                     div.style.opacity = '0';
                     div.style.transform = 'translateY(20px)';
-                    
                     div.innerHTML = `
                         <div class="tl-content">
                             <div class="tl-tahun">${item.tahun}</div>
@@ -24,14 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     tlContainer.appendChild(div);
                 });
             }
-            
             const faqContainer = document.getElementById('faqContainer');
             if(faqContainer) {
                 faqContainer.innerHTML = '';
                 data.faq.forEach(item => {
                     const div = document.createElement('div');
                     div.className = 'faq-item';
-                    
                     div.innerHTML = `
                         <div class="faq-question">
                             <span>${item.tanya}</span>
@@ -39,13 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="faq-answer">${item.jawab}</div>
                     `;
-                    
                     div.querySelector('.faq-question').addEventListener('click', () => {
                         div.classList.toggle('active');
                         const icon = div.querySelector('.faq-icon');
                         icon.textContent = div.classList.contains('active') ? '×' : '+';
                     });
-                    
                     faqContainer.appendChild(div);
                 });
             }

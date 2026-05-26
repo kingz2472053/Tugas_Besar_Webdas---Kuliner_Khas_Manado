@@ -1,4 +1,4 @@
-/* css/forms.css */
+
 .form-container {
     background-color: var(--bg-card);
     padding: 40px;
@@ -74,7 +74,7 @@ textarea.form-control {
     75% { transform: translateX(-5px); }
 }
 
-/* Cart Sidebar (Pesan Online) */
+
 .cart-layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -169,7 +169,7 @@ body.dark-theme .cart-total { color: var(--accent); }
     font-style: italic;
 }
 
-/* Rating Stars */
+
 .rating-input {
     display: flex;
     flex-direction: row-reverse;
@@ -190,7 +190,7 @@ body.dark-theme .cart-total { color: var(--accent); }
     color: var(--gold);
 }
 
-/* Modal Popup */
+
 .modal-backdrop {
     position: fixed;
     top: 0;
