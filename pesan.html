@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Oleh-Oleh Online - Woku Manado</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Woku Manado
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="menu.html" class="nav-link">Kategori Menu</a>
+                <a href="pesan.html" class="nav-link active">Pesan Online</a>
+                <a href="galeri.html" class="nav-link">Galeri</a>
+                <a href="reservasi.html" class="nav-link">Reservasi</a>
+                <a href="saran.html" class="nav-link">Saran</a>
+                <a href="lokasi.html" class="nav-link">Lokasi</a>
+                <a href="tentang.html" class="nav-link">Tentang</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Ganti Tema">◐</button>
+                <div class="cart-icon" id="cartToggleIcon" title="Lihat Keranjang">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Pesan Oleh-Oleh Khas Manado</h2>
+                <p>Kini masakan otentik Manado bisa dikirim ke seluruh Indonesia. Dikemas aman dengan plastik vakum tahan lama.</p>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="cart-layout">
+                <!-- Produk Grid -->
+                <div class="product-section scroll-reveal">
+                    <div class="filter-container" id="produkFilters">
+                        <button class="filter-btn active" data-filter="semua">Semua Produk</button>
+                        <button class="filter-btn" data-filter="ikan">Olahan Ikan</button>
+                        <button class="filter-btn" data-filter="sambal">Sambal & Bumbu</button>
+                        <button class="filter-btn" data-filter="kue">Kue & Snack</button>
+                        <button class="filter-btn" data-filter="minuman">Minuman</button>
+                    </div>
+                    
+                    <div class="product-grid" id="productGrid">
+                        <!-- Diisi via JS -->
+                        <p style="text-align: center; width: 100%; color: var(--text-muted);">Memuat produk...</p>
+                    </div>
+                </div>
+
+                <!-- Cart Sidebar -->
+                <div class="cart-sidebar scroll-reveal" id="cartSidebar">
+                    <h3>Keranjang Belanja</h3>
+                    
+                    <div class="cart-items" id="cartItems">
+                        <!-- Diisi via JS -->
+                        <div class="empty-cart-msg">Keranjang Anda masih kosong.</div>
+                    </div>
+                    
+                    <div class="cart-summary" id="cartSummary" style="display: none;">
+                        <div class="cart-summary-row">
+                            <span>Subtotal:</span>
+                            <span id="cartSubtotal">Rp 0</span>
+                        </div>
+                        <div class="cart-summary-row">
+                            <span>Estimasi Ongkir (Jawa):</span>
+                            <span>Rp 25.000</span>
+                        </div>
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span id="cartTotal">Rp 0</span>
+                        </div>
+                        
+                        <button class="btn-primary" style="width: 100%; margin-top: 20px;" onclick="document.getElementById('formCheckout').scrollIntoView({behavior: 'smooth'})">Lanjut ke Pembayaran</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Checkout Form -->
+            <div id="formCheckout" class="form-container scroll-reveal" style="margin-top: 60px; display: none;">
+                <h3 style="margin-bottom: 25px; font-size: 1.5rem; text-align: center;">Formulir Pengiriman</h3>
+                <form id="checkoutForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Nama Penerima</label>
+                            <input type="text" class="form-control" id="coNama" required>
+                            <div class="error-msg">Nama harus diisi</div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">No. WhatsApp</label>
+                            <input type="tel" class="form-control" id="coTelp" required>
+                            <div class="error-msg">Nomor telepon harus diisi</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Alamat Lengkap Pengiriman</label>
+                        <textarea class="form-control" id="coAlamat" required placeholder="Nama Jalan, RT/RW, Kelurahan, Kecamatan..."></textarea>
+                        <div class="error-msg">Alamat harus diisi</div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Kota / Kabupaten</label>
+                            <input type="text" class="form-control" id="coKota" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Provinsi</label>
+                            <select class="form-control" id="coProvinsi" required>
+                                <option value="">Pilih Provinsi</option>
+                                <option value="DKI Jakarta">DKI Jakarta</option>
+                                <option value="Jawa Barat">Jawa Barat</option>
+                                <option value="Jawa Tengah">Jawa Tengah</option>
+                                <option value="Jawa Timur">Jawa Timur</option>
+                                <option value="Banten">Banten</option>
+                                <option value="Bali">Bali</option>
+                                <option value="Sulawesi Utara">Sulawesi Utara</option>
+                                <option value="Lainnya">Lainnya...</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Ekspedisi</label>
+                        <select class="form-control" id="coEkspedisi">
+                            <option value="jne">JNE YES / REG</option>
+                            <option value="jnt">J&T Express</option>
+                            <option value="sicepat">SiCepat BEST</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%; padding: 15px; font-size: 1.1rem; margin-top: 10px;">Konfirmasi Pesanan</button>
+                </form>
+                
+                <div id="checkoutSuccess" style="display: none; text-align: center; padding: 30px;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🎉</div>
+                    <h3 style="color: var(--success); margin-bottom: 10px;">Pesanan Berhasil!</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Nomor Pesanan: <strong id="orderNumber" style="color: var(--primary);">#WM12345</strong></p>
+                    <p>Terima kasih telah memesan. Kami akan segera menghubungi Anda via WhatsApp untuk detail pembayaran transfer.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Woku Manado. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/animasi.js"></script>
+    <script src="js/pesan.js"></script>
+</body>
+</html>

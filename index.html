@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woku Manado - Cita Rasa Asli Sulawesi Utara</title>
+    <meta name="description" content="Jelajahi kekayaan kuliner khas Sulawesi Utara dan Manado di Woku Manado.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Woku Manado
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Beranda</a>
+                <a href="menu.html" class="nav-link">Kategori Menu</a>
+                <a href="pesan.html" class="nav-link">Pesan Online</a>
+                <a href="galeri.html" class="nav-link">Galeri</a>
+                <a href="reservasi.html" class="nav-link">Reservasi</a>
+                <a href="saran.html" class="nav-link">Saran</a>
+                <a href="lokasi.html" class="nav-link">Lokasi</a>
+                <a href="tentang.html" class="nav-link">Tentang</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Ganti Tema">◐</button>
+                <a href="pesan.html" class="cart-icon" title="Keranjang">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider" id="heroSlider">
+            <!-- Slides di-generate via JS -->
+            <div class="hero-slide active">
+                <div class="hero-img-container">
+                    <img src="img/hero/Ikan woku.jpg" alt="Ikan Woku">
+                </div>
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Cita Rasa Asli Sulawesi Utara</h1>
+                        <p>Jelajahi kelezatan kuliner khas Manado yang kaya rempah dan penuh cerita tradisi Minahasa sejak ratusan tahun.</p>
+                        <div class="hero-actions">
+                            <a href="menu.html" class="btn-primary">Jelajahi Menu</a>
+                            <a href="pesan.html" class="btn-outline" style="border-color:#fff; color:#fff;">Pesan Oleh-Oleh</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-img-container">
+                    <img src="img/hero/Tinutuan.jpg" alt="Tinutuan">
+                </div>
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Kehangatan Pagi di Manado</h1>
+                        <p>Nikmati semangkuk Tinutuan yang kaya akan sayuran segar, jagung, dan ubi jalar penambah energi di pagi hari.</p>
+                        <div class="hero-actions">
+                            <a href="menu.html" class="btn-primary">Jelajahi Menu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-img-container">
+                    <img src="img/hero/Klappertaart.jpg" alt="Klappertaart">
+                </div>
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <h1>Manisnya Warisan Tradisi</h1>
+                        <p>Manjakan lidah Anda dengan kelembutan Klappertaart dan ragam kue jajanan tradisional peninggalan kolonial.</p>
+                        <div class="hero-actions">
+                            <a href="galeri.html" class="btn-primary">Lihat Galeri</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-nav" id="heroNav">
+            <div class="hero-dot active" data-index="0"><div class="hero-dot-progress"></div></div>
+            <div class="hero-dot" data-index="1"><div class="hero-dot-progress"></div></div>
+            <div class="hero-dot" data-index="2"><div class="hero-dot-progress"></div></div>
+        </div>
+    </section>
+
+    <!-- Menu Unggulan -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Menu Unggulan Kami</h2>
+                <p>Favorit para pelanggan yang selalu menjadi primadona di Woku Manado.</p>
+                <div class="accent-line"></div>
+            </div>
+            
+            <div class="menu-grid scroll-reveal" id="featuredMenu">
+                <!-- Akan diisi via JavaScript dari menu.json (hanya 3-6 teratas) -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;" class="scroll-reveal">
+                <a href="menu.html" class="btn-primary">Lihat Semua Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pesan Online Banner -->
+    <section class="section" style="background-color: var(--primary); color: #fff;">
+        <div class="container" style="text-align: center;">
+            <div class="scroll-reveal">
+                <h2 style="color: var(--accent); font-size: 2.2rem; margin-bottom: 15px;">Kangen Masakan Manado?</h2>
+                <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; color: rgba(255,255,255,0.9);">
+                    Kini Anda bisa menikmati Cakalang Suwir, Sambal Roa, dan Klappertaart langsung di rumah Anda. Kami melayani pengiriman ke seluruh Indonesia!
+                </p>
+                <a href="pesan.html" class="btn-primary" style="background-color: var(--accent); color: var(--text-main);">Pesan Online Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                        Woku Manado
+                    </h3>
+                    <p class="footer-desc">Menyajikan informasi lengkap dan pengalaman autentik kuliner khas Sulawesi Utara sejak 2026.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></a>
+                        <a href="#" class="social-icon" title="Facebook"><svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Menu Kami</h4>
+                    <ul>
+                        <li><a href="menu.html">Semua Kategori</a></li>
+                        <li><a href="menu.html">Makanan Utama</a></li>
+                        <li><a href="menu.html">Ikan & Seafood</a></li>
+                        <li><a href="menu.html">Kue Tradisional</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="pesan.html">Pesan Oleh-Oleh</a></li>
+                        <li><a href="reservasi.html">Reservasi Meja</a></li>
+                        <li><a href="lokasi.html">Lokasi Restoran</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>Manado, Sulawesi Utara</li>
+                        <li>info@wokumanado.id</li>
+                        <li>+62 811 2233 4455</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Woku Manado. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/animasi.js"></script>
+    <script>
+        // Load featured menu
+        fetch('data/menu.json')
+            .then(res => res.json())
+            .then(data => {
+                const container = document.getElementById('featuredMenu');
+                // Ambil 3 teratas yang ratingnya tinggi
+                const featured = data.sort((a,b) => b.rating - a.rating).slice(0, 3);
+                
+                let html = '';
+                featured.forEach(item => {
+                    html += `
+                    <div class="menu-card" onclick="location.href='menu.html'">
+                        <div class="menu-card-img">
+                            <img src="${item.gambar}" alt="${item.nama}">
+                            <div class="badge-kategori">${item.kategori.replace('-', ' ').toUpperCase()}</div>
+                        </div>
+                        <div class="menu-card-content">
+                            <h3>${item.nama}</h3>
+                            <p>${item.deskripsi}</p>
+                            <div class="menu-rating">
+                                ★★★★☆ <span>${item.rating}</span>
+                            </div>
+                        </div>
+                    </div>`;
+                });
+                container.innerHTML = html;
+            });
+    </script>
+</body>
+</html>

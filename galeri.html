@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Kuliner - Woku Manado</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 20px;
+            padding: 20px 0;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .masonry-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .masonry-item:hover img {
+            transform: scale(1.05);
+        }
+        .masonry-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: #fff;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        .masonry-item:hover .masonry-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (max-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (max-width: 480px) {
+            .masonry-grid { column-count: 1; }
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: var(--radius-sm);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 30px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none; border: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Woku Manado</a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="menu.html" class="nav-link">Kategori Menu</a>
+                <a href="pesan.html" class="nav-link">Pesan Online</a>
+                <a href="galeri.html" class="nav-link active">Galeri</a>
+                <a href="reservasi.html" class="nav-link">Reservasi</a>
+                <a href="saran.html" class="nav-link">Saran</a>
+                <a href="lokasi.html" class="nav-link">Lokasi</a>
+                <a href="tentang.html" class="nav-link">Tentang</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">◐</button>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Galeri Visual</h2>
+                <p>Jelajahi keindahan estetika penyajian masakan khas Manado.</p>
+                <div class="accent-line"></div>
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 30px;" id="galeriFilters">
+                <button class="btn-outline active" style="margin:5px;" onclick="filterGaleri('semua')">Semua</button>
+                <button class="btn-outline" style="margin:5px;" onclick="filterGaleri('utama')">Makanan</button>
+                <button class="btn-outline" style="margin:5px;" onclick="filterGaleri('kue')">Kue</button>
+                <button class="btn-outline" style="margin:5px;" onclick="filterGaleri('suasana')">Suasana</button>
+            </div>
+
+            <div class="masonry-grid scroll-reveal" id="masonryGrid">
+                <!-- Diisi via js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <img src="" alt="View" id="lightboxImg">
+        <p id="lightboxCaption" style="position: absolute; bottom: 30px; color: #fff; font-size: 1.2rem;"></p>
+    </div>
+
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 Woku Manado.</p></div></div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/animasi.js"></script>
+    <script src="js/galeri.js"></script>
+</body>
+</html>

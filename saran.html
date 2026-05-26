@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saran & Kritik - Woku Manado</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Woku Manado</a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="menu.html" class="nav-link">Kategori Menu</a>
+                <a href="pesan.html" class="nav-link">Pesan Online</a>
+                <a href="galeri.html" class="nav-link">Galeri</a>
+                <a href="reservasi.html" class="nav-link">Reservasi</a>
+                <a href="saran.html" class="nav-link active">Saran</a>
+                <a href="lokasi.html" class="nav-link">Lokasi</a>
+                <a href="tentang.html" class="nav-link">Tentang</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">◐</button>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Saran & Kritik</h2>
+                <p>Bantu kami untuk terus meningkatkan kualitas hidangan dan pelayanan.</p>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="form-container scroll-reveal" id="saranContainer">
+                <form id="formSaran">
+                    <div class="form-group" style="text-align: center; margin-bottom: 30px;">
+                        <label class="form-label" style="font-size: 1.1rem; margin-bottom: 15px;">Bagaimana pengalaman Anda?</label>
+                        <div class="rating-input">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5" title="Sangat Bagus">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="Bagus">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="Cukup">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="Kurang">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="Buruk">★</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Nama (Opsional)</label>
+                            <input type="text" class="form-control" id="sarNama">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email (Opsional)</label>
+                            <input type="email" class="form-control" id="sarEmail">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Saran & Kritik Anda</label>
+                        <textarea class="form-control" id="sarPesan" required placeholder="Tuliskan pengalaman Anda..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%;">Kirim Masukan</button>
+                </form>
+                
+                <div id="saranSukses" style="display:none; text-align:center; padding: 40px 0;">
+                    <h3 style="color: var(--success); font-size: 1.8rem; margin-bottom: 10px;">Terima Kasih!</h3>
+                    <p>Masukan Anda sangat berarti bagi kami untuk terus berkembang.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 Woku Manado.</p></div></div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/animasi.js"></script>
+    <script src="js/saran.js"></script>
+</body>
+</html>

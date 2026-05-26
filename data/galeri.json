@@ -1,0 +1,56 @@
+[
+  {
+    "id": "g1",
+    "kategori": "utama",
+    "gambar": "img/galeri/Ikan woku.jpg",
+    "caption": "Ayam Woku Khas Manado yang kaya rempah"
+  },
+  {
+    "id": "g2",
+    "kategori": "suasana",
+    "gambar": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop",
+    "caption": "Ikan Segar dari perairan Sulawesi Utara"
+  },
+  {
+    "id": "g3",
+    "kategori": "kue",
+    "gambar": "img/galeri/Klappertaart.jpg",
+    "caption": "Klappertaart, manis lembut warisan kolonial"
+  },
+  {
+    "id": "g4",
+    "kategori": "utama",
+    "gambar": "img/galeri/Tinutuan.jpg",
+    "caption": "Bubur Tinutuan hangat untuk sarapan"
+  },
+  {
+    "id": "g5",
+    "kategori": "utama",
+    "gambar": "img/galeri/dabu-dabu manado.jpg",
+    "caption": "Dabu-dabu segar siap menemani santapan"
+  },
+  {
+    "id": "g6",
+    "kategori": "kue",
+    "gambar": "img/galeri/Lalampa.jpg",
+    "caption": "Lalampa bakar dengan aroma daun pisang"
+  },
+  {
+    "id": "g7",
+    "kategori": "suasana",
+    "gambar": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&h=700&fit=crop",
+    "caption": "Keindahan Taman Laut Bunaken"
+  },
+  {
+    "id": "g8",
+    "kategori": "minuman",
+    "gambar": "img/galeri/Es Brenebon.jpg",
+    "caption": "Es Brenebon segar menyegarkan siang hari"
+  },
+  {
+    "id": "g9",
+    "kategori": "kue",
+    "gambar": "img/galeri/Kue Ku.jpg",
+    "caption": "Kue Ku lambang kemakmuran"
+  }
+]

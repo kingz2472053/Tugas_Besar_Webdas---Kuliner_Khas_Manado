@@ -1,0 +1,122 @@
+[
+  {
+    "id": "m1",
+    "nama": "Ayam Woku",
+    "deskripsi": "Ayam bumbu woku dengan rempah segar khas Minahasa yang kaya aroma kemangi.",
+    "sejarah": "Ayam Woku adalah masakan khas Minahasa yang sudah ada sejak zaman nenek moyang suku Minahasa. Bumbu woku terdiri dari campuran rempah segar seperti kemangi, serai, daun jeruk, kunyit, dan cabai yang dihaluskan kemudian ditumis bersama ayam.",
+    "kategori": "makanan-utama",
+    "bahan": ["Ayam kampung", "Kemangi", "Serai", "Daun jeruk", "Kunyit", "Cabai rawit", "Bawang merah", "Bawang putih"],
+    "rating": 4.9,
+    "gambar": "img/menu/Ikan woku.jpg"
+  },
+  {
+    "id": "m2",
+    "nama": "Tinutuan (Bubur Manado)",
+    "deskripsi": "Bubur Manado yang kaya sayuran, jagung, dan labu — sarapan legendaris khas Sulut.",
+    "sejarah": "Tinutuan atau Bubur Manado adalah makanan legendaris yang mencerminkan filosofi hidup masyarakat Minahasa yang saling berbagi.",
+    "kategori": "sup-berkuah",
+    "bahan": ["Beras", "Jagung manis", "Ubi jalar", "Labu kuning", "Kangkung", "Bayam", "Daun kemangi"],
+    "rating": 4.8,
+    "gambar": "img/menu/Tinutuan.jpg"
+  },
+  {
+    "id": "m3",
+    "nama": "Cakalang Fufu",
+    "deskripsi": "Ikan cakalang asap tradisional dengan aroma kayu kelapa yang menggoda.",
+    "sejarah": "Cakalang Fufu adalah ikan cakalang yang diasap dengan teknik tradisional. Kata 'fufu' berarti diasap.",
+    "kategori": "ikan-seafood",
+    "bahan": ["Ikan cakalang segar", "Garam", "Kayu kelapa", "Sabut kelapa"],
+    "rating": 4.9,
+    "gambar": "img/menu/Cakalang.jpg"
+  },
+  {
+    "id": "m4",
+    "nama": "Dabu-Dabu",
+    "deskripsi": "Sambal segar khas Manado tanpa dimasak, teman setia setiap hidangan.",
+    "sejarah": "Dabu-Dabu adalah sambal segar khas Manado yang dibuat tanpa dimasak. Dabu-dabu sudah menjadi bagian tak terpisahkan dari hidangan Manado.",
+    "kategori": "sambal-pelengkap",
+    "bahan": ["Tomat merah", "Cabai rawit", "Bawang merah", "Jeruk nipis", "Minyak goreng panas"],
+    "rating": 4.8,
+    "gambar": "img/menu/dabu-dabu manado.jpg"
+  },
+  {
+    "id": "m5",
+    "nama": "Klappertaart",
+    "deskripsi": "Kue kelapa warisan Belanda-Manado, lembut seperti puding dengan topping kenari.",
+    "sejarah": "Klappertaart merupakan warisan budaya kolonial Belanda yang dipadukan dengan bahan lokal kelapa muda Sulawesi Utara.",
+    "kategori": "kue-jajanan",
+    "bahan": ["Kelapa muda", "Susu", "Telur", "Kismis", "Kenari", "Kayu manis"],
+    "rating": 4.9,
+    "gambar": "img/menu/Klappertaart.jpg"
+  },
+  {
+    "id": "m6",
+    "nama": "Lalampa",
+    "deskripsi": "Ketan gulung bakar berisi ikan cakalang rica-rica yang gurih dan pedas.",
+    "sejarah": "Lalampa mirip dengan lemper, namun selalu dibakar sebelum disajikan. Isiannya menggunakan ikan tongkol atau cakalang yang dimasak pedas.",
+    "kategori": "kue-jajanan",
+    "bahan": ["Beras ketan", "Santan", "Ikan cakalang", "Cabai rawit", "Daun pisang"],
+    "rating": 4.7,
+    "gambar": "img/menu/Lalampa.jpg"
+  },
+  {
+    "id": "m7",
+    "nama": "Biapong Ba",
+    "deskripsi": "Bakpao khas Manado dengan isian daging gurih manis yang khas.",
+    "sejarah": "Biapong merupakan adaptasi dari bakpao Tiongkok. Biapong Ba terkenal dengan isian daging babi kecap, namun ada juga varian halal.",
+    "kategori": "kue-jajanan",
+    "bahan": ["Tepung terigu", "Ragi", "Daging cincang", "Kecap manis", "Bawang putih"],
+    "rating": 4.8,
+    "gambar": "img/menu/Biapong Ba.jpg"
+  },
+  {
+    "id": "m8",
+    "nama": "Es Brenebon",
+    "deskripsi": "Es kacang merah yang manis dan menyegarkan dengan sirup khas.",
+    "sejarah": "Brenebon berasal dari bahasa Belanda bruine bonen. Versi manisnya dijadikan es yang sangat populer di Manado.",
+    "kategori": "minuman",
+    "bahan": ["Kacang merah", "Gula merah", "Susu kental manis", "Es serut", "Sirup"],
+    "rating": 4.7,
+    "gambar": "img/menu/Es Brenebon.jpg"
+  },
+  {
+    "id": "m9",
+    "nama": "Kue Ku",
+    "deskripsi": "Kue tradisional berbentuk kura-kura dengan isian kacang hijau yang manis.",
+    "sejarah": "Kue Ku merupakan kue tradisional peranakan yang melambangkan panjang umur dan kemakmuran.",
+    "kategori": "kue-jajanan",
+    "bahan": ["Tepung ketan", "Kacang hijau kupas", "Gula pasir", "Santan"],
+    "rating": 4.6,
+    "gambar": "img/menu/Kue Ku.jpg"
+  },
+  {
+    "id": "m10",
+    "nama": "Saguer",
+    "deskripsi": "Minuman tradisional hasil sadapan pohon aren yang manis dan segar.",
+    "sejarah": "Saguer adalah tuak manis khas Minahasa. Jika difermentasi lebih lama dan disuling, akan menjadi minuman Cap Tikus.",
+    "kategori": "minuman",
+    "bahan": ["Air nira pohon aren"],
+    "rating": 4.5,
+    "gambar": "img/menu/Saguer.jpeg"
+  },
+  {
+    "id": "m11",
+    "nama": "Sara'ba",
+    "deskripsi": "Minuman hangat berempah perpaduan jahe, gula aren, dan santan.",
+    "sejarah": "Sara'ba adalah minuman penghangat tubuh yang dipengaruhi budaya Bugis-Makassar namun sangat populer di pesisir Manado.",
+    "kategori": "minuman",
+    "bahan": ["Jahe merah", "Gula aren", "Santan", "Kuning telur kampung", "Merica"],
+    "rating": 4.8,
+    "gambar": "img/menu/Sara'ba.jpeg"
+  },
+  {
+    "id": "m12",
+    "nama": "Rica-Rica",
+    "deskripsi": "Masakan bumbu rica yang pedas membakar, jiwa kuliner Manado sesungguhnya.",
+    "sejarah": "Kata 'rica' berasal dari bahasa Manado yang berarti cabai. Rica-rica bisa digunakan untuk mengolah ayam, ikan, babi, atau daging lainnya.",
+    "kategori": "makanan-utama",
+    "bahan": ["Cabai merah", "Cabai rawit", "Bawang merah", "Jahe", "Daun jeruk"],
+    "rating": 4.9,
+    "gambar": "https://images.unsplash.com/photo-1606491956689-2ea866880049?w=600&h=400&fit=crop"
+  }
+]

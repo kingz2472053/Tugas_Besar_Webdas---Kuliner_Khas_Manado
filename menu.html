@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Menu - Woku Manado</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Woku Manado
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="menu.html" class="nav-link active">Kategori Menu</a>
+                <a href="pesan.html" class="nav-link">Pesan Online</a>
+                <a href="galeri.html" class="nav-link">Galeri</a>
+                <a href="reservasi.html" class="nav-link">Reservasi</a>
+                <a href="saran.html" class="nav-link">Saran</a>
+                <a href="lokasi.html" class="nav-link">Lokasi</a>
+                <a href="tentang.html" class="nav-link">Tentang</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Ganti Tema">◐</button>
+                <a href="pesan.html" class="cart-icon" title="Keranjang">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+                <button class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Menu -->
+    <section class="section" style="padding-top: 50px; padding-bottom: 30px;">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Buku Menu Kami</h2>
+                <p>Eksplorasi beragam masakan tradisional Minahasa yang otentik dan kaya rempah.</p>
+                <div class="accent-line"></div>
+            </div>
+            
+            <!-- Filters -->
+            <div class="filter-container scroll-reveal" id="menuFilters">
+                <button class="filter-btn active" data-filter="semua">Semua</button>
+                <button class="filter-btn" data-filter="makanan-utama">Makanan Utama</button>
+                <button class="filter-btn" data-filter="ikan-seafood">Ikan & Seafood</button>
+                <button class="filter-btn" data-filter="sup-berkuah">Sup & Berkuah</button>
+                <button class="filter-btn" data-filter="sambal-pelengkap">Sambal & Pelengkap</button>
+                <button class="filter-btn" data-filter="kue-jajanan">Kue & Jajanan</button>
+                <button class="filter-btn" data-filter="minuman">Minuman Khas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Grid -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="menu-grid" id="menuGrid">
+                <!-- Diisi via JS dari menu.json -->
+                <p style="text-align: center; width: 100%; color: var(--text-muted);">Memuat menu...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Woku Manado. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Popup Detail Menu -->
+    <div class="modal-backdrop" id="menuModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">✕</button>
+            <img src="" alt="" class="modal-img" id="modalImg">
+            <div class="modal-body">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <span class="badge-kategori" id="modalKat" style="position: static; box-shadow: none; border: 1px solid var(--primary);">Kategori</span>
+                    <div class="menu-rating">★ <span id="modalRating">4.0</span></div>
+                </div>
+                <h2 id="modalNama">Nama Menu</h2>
+                <p id="modalDesc" style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 25px;"></p>
+                
+                <h4 style="color: var(--primary); margin-bottom: 8px;">Cerita & Sejarah</h4>
+                <p id="modalSejarah" style="margin-bottom: 25px; line-height: 1.7;"></p>
+                
+                <h4 style="color: var(--primary); margin-bottom: 8px;">Bahan Utama</h4>
+                <ul id="modalBahan" style="list-style-type: disc; margin-left: 20px; line-height: 1.8;">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/animasi.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

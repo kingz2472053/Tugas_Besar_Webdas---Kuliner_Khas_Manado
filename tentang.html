@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Woku Manado</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary);
+            top: 0; bottom: 0; left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+        .tl-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .tl-left { left: 0; }
+        .tl-right { left: 50%; }
+        .tl-container::after {
+            content: '';
+            position: absolute;
+            width: 20px; height: 20px;
+            right: -10px; top: 20px;
+            background-color: var(--bg-main);
+            border: 4px solid var(--accent);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .tl-right::after { left: -10px; }
+        .tl-content {
+            padding: 20px 30px;
+            background-color: var(--bg-card);
+            position: relative;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+        .tl-tahun { color: var(--gold); font-weight: 600; font-size: 0.9rem; margin-bottom: 5px; }
+        
+        @media (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .tl-container { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .tl-container::after { left: 21px; }
+            .tl-right { left: 0; }
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question:hover { background-color: var(--nav-bg); }
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            display: none;
+            line-height: 1.7;
+        }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-icon { transition: transform 0.3s ease; font-size: 1.5rem; color: var(--primary); }
+        body.dark-theme .faq-icon { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Woku Manado</a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="menu.html" class="nav-link">Kategori Menu</a>
+                <a href="pesan.html" class="nav-link">Pesan Online</a>
+                <a href="galeri.html" class="nav-link">Galeri</a>
+                <a href="reservasi.html" class="nav-link">Reservasi</a>
+                <a href="saran.html" class="nav-link">Saran</a>
+                <a href="lokasi.html" class="nav-link">Lokasi</a>
+                <a href="tentang.html" class="nav-link active">Tentang</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">◐</button>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" style="background-color: var(--bg-card); border-bottom: 1px solid var(--border);">
+        <div class="container" style="text-align: center; max-width: 800px;">
+            <div class="scroll-reveal">
+                <h1 style="font-size: 2.8rem; margin-bottom: 20px; color: var(--primary);">Jejak Rasa Minahasa</h1>
+                <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.8;">Woku Manado berdedikasi melestarikan dan memperkenalkan kekayaan kuliner khas Sulawesi Utara kepada dunia. Kami percaya bahwa setiap hidangan membawa cerita sejarah dan filosofi masyarakat Minahasa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;" class="scroll-reveal">Garis Waktu Kuliner Manado</h2>
+            <div class="timeline scroll-reveal" id="timelineContainer">
+                <!-- Diisi via JS -->
+                <p style="text-align: center; color: var(--text-muted);">Memuat sejarah...</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 60px auto 0;">
+                <h2 style="text-align: center; margin-bottom: 40px;" class="scroll-reveal">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+                <div id="faqContainer" class="scroll-reveal">
+                    <!-- Diisi via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 Woku Manado.</p></div></div>
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/animasi.js"></script>
+    <script src="js/tentang.js"></script>
+</body>
+</html>
