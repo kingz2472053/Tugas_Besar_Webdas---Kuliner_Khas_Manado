@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woku Manado - Cita Rasa Asli Sulawesi Utara</title>
     <meta name="description" content="Jelajahi kekayaan kuliner khas Sulawesi Utara dan Manado di Woku Manado.">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/hero.css">
@@ -15,15 +13,12 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="nav-brand">
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                 Woku Manado
             </a>
-            
             <div class="nav-menu" id="navMenu">
                 <a href="index.html" class="nav-link active">Beranda</a>
                 <a href="menu.html" class="nav-link">Kategori Menu</a>
@@ -34,7 +29,6 @@
                 <a href="lokasi.html" class="nav-link">Lokasi</a>
                 <a href="tentang.html" class="nav-link">Tentang</a>
             </div>
-            
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" title="Ganti Tema">◐</button>
                 <a href="pesan.html" class="cart-icon" title="Keranjang">
@@ -47,11 +41,8 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-slider" id="heroSlider">
-            <!-- Slides di-generate via JS -->
             <div class="hero-slide active">
                 <div class="hero-img-container">
                     <img src="img/hero/Ikan woku.jpg" alt="Ikan Woku">
@@ -96,15 +87,12 @@
                 </div>
             </div>
         </div>
-        
         <div class="hero-nav" id="heroNav">
             <div class="hero-dot active" data-index="0"><div class="hero-dot-progress"></div></div>
             <div class="hero-dot" data-index="1"><div class="hero-dot-progress"></div></div>
             <div class="hero-dot" data-index="2"><div class="hero-dot-progress"></div></div>
         </div>
     </section>
-
-    <!-- Menu Unggulan -->
     <section class="section">
         <div class="container">
             <div class="section-header scroll-reveal">
@@ -112,9 +100,7 @@
                 <p>Favorit para pelanggan yang selalu menjadi primadona di Woku Manado.</p>
                 <div class="accent-line"></div>
             </div>
-            
             <div class="menu-grid scroll-reveal" id="featuredMenu">
-                <!-- Akan diisi via JavaScript dari menu.json (hanya 3-6 teratas) -->
             </div>
             
             <div style="text-align: center; margin-top: 40px;" class="scroll-reveal">
@@ -135,8 +121,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -161,7 +145,6 @@
                         <li><a href="menu.html">Kue Tradisional</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h4>Layanan</h4>
                     <ul>
@@ -170,7 +153,6 @@
                         <li><a href="lokasi.html">Lokasi Restoran</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h4>Kontak</h4>
                     <ul>
@@ -186,18 +168,14 @@
             </div>
         </div>
     </footer>
-
-    <!-- Scripts -->
     <script src="js/navbar.js"></script>
     <script src="js/hero.js"></script>
     <script src="js/animasi.js"></script>
     <script>
-        // Load featured menu
         fetch('data/menu.json')
             .then(res => res.json())
             .then(data => {
                 const container = document.getElementById('featuredMenu');
-                // Ambil 3 teratas yang ratingnya tinggi
                 const featured = data.sort((a,b) => b.rating - a.rating).slice(0, 3);
                 
                 let html = '';
