@@ -117,7 +117,7 @@ window.DATA_MENU = [
     "kategori": "makanan-utama",
     "bahan": ["Cabai merah", "Cabai rawit", "Bawang merah", "Jahe", "Daun jeruk"],
     "rating": 4.9,
-    "gambar": "https://images.unsplash.com/photo-1606491956689-2ea866880049?w=600&h=400&fit=crop"
+    "gambar": "img/menu/Rica-Rica.png"
   }
 ]
 ;

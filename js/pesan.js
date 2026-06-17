@@ -28,9 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         items.forEach((item, index) => {
             const card = document.createElement('div');
             card.className = 'product-card';
-            card.style.animation = `slideUp 0.5s ease ${index * 0.1}s forwards`;
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
+            card.style.animationDelay = `${index * 0.1}s`;
             let badgeHtml = item.bestSeller ? '<div class="bestseller-badge">BEST SELLER</div>' : '';
             card.innerHTML = `
                 <div class="product-img">

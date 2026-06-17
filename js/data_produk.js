@@ -7,7 +7,7 @@ window.DATA_PRODUK = [
     "varian": ["Original", "Spicy", "Extra Spicy"],
     "harga": 45000,
     "berat": "200g",
-    "gambar": "img/produk/Cakalang suwir.jpeg",
+    "gambar": "img/menu/Cakalang suwir.jpeg",
     "stok": 50,
     "bestSeller": true
   },
@@ -19,7 +19,7 @@ window.DATA_PRODUK = [
     "varian": ["Pedas Sedang", "Pedas Gila"],
     "harga": 55000,
     "berat": "150g",
-    "gambar": "img/produk/Cakalang suwir.jpeg",
+    "gambar": "img/menu/dabu-dabu manado.jpg",
     "stok": 120,
     "bestSeller": true
   },
@@ -31,7 +31,7 @@ window.DATA_PRODUK = [
     "varian": ["Original", "Keju", "Almond"],
     "harga": 85000,
     "berat": "500g",
-    "gambar": "img/produk/Cakalang suwir.jpeg",
+    "gambar": "img/menu/Klappertaart.jpg",
     "stok": 20,
     "bestSeller": false
   },
@@ -43,7 +43,7 @@ window.DATA_PRODUK = [
     "varian": ["Sachet 3pcs", "Jar 250g"],
     "harga": 25000,
     "berat": "150g",
-    "gambar": "img/produk/Cakalang suwir.jpeg",
+    "gambar": "img/menu/Ikan woku.jpg",
     "stok": 200,
     "bestSeller": false
   },
@@ -55,7 +55,7 @@ window.DATA_PRODUK = [
     "varian": ["Manis", "Pedas"],
     "harga": 40000,
     "berat": "100g",
-    "gambar": "img/produk/Cakalang suwir.jpeg",
+    "gambar": "img/menu/abon_cakalang.png",
     "stok": 80,
     "bestSeller": false
   },
@@ -67,7 +67,7 @@ window.DATA_PRODUK = [
     "varian": ["Isi 6", "Isi 12"],
     "harga": 50000,
     "berat": "400g",
-    "gambar": "img/produk/Cakalang suwir.jpeg",
+    "gambar": "img/menu/Biapong Ba.jpg",
     "stok": 40,
     "bestSeller": false
   },
@@ -79,7 +79,7 @@ window.DATA_PRODUK = [
     "varian": ["1 Jepit (10 Ekor)"],
     "harga": 120000,
     "berat": "500g",
-    "gambar": "img/produk/Cakalang suwir.jpeg",
+    "gambar": "img/menu/Cakalang.jpg",
     "stok": 15,
     "bestSeller": true
   },
@@ -91,7 +91,7 @@ window.DATA_PRODUK = [
     "varian": ["Original"],
     "harga": 35000,
     "berat": "250g",
-    "gambar": "img/produk/Cakalang suwir.jpeg",
+    "gambar": "img/menu/Kue Ku.jpg",
     "stok": 100,
     "bestSeller": false
   },
@@ -103,7 +103,7 @@ window.DATA_PRODUK = [
     "varian": ["500ml", "1 Liter"],
     "harga": 45000,
     "berat": "500g",
-    "gambar": "img/produk/Cakalang suwir.jpeg",
+    "gambar": "img/menu/Saguer.jpeg",
     "stok": 30,
     "bestSeller": false
   }

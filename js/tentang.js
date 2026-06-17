@@ -9,9 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const cls = index % 2 === 0 ? 'tl-left' : 'tl-right';
                     const div = document.createElement('div');
                     div.className = `tl-container ${cls}`;
-                    div.style.animation = `slideUp 0.5s ease ${index * 0.2}s forwards`;
-                    div.style.opacity = '0';
-                    div.style.transform = 'translateY(20px)';
+                    div.style.animationDelay = `${index * 0.2}s`;
                     div.innerHTML = `
                         <div class="tl-content">
                             <div class="tl-tahun">${item.tahun}</div>
