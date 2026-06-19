@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kategori Menu - Woku Manado</title>
-    
-    
+
+
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/cards.css">
@@ -15,14 +15,14 @@
 </head>
 <body>
 
-    
+
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="nav-brand">
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                 Woku Manado
             </a>
-            
+
             <div class="nav-menu" id="navMenu">
                 <a href="index.html" class="nav-link">Beranda</a>
                 <a href="menu.html" class="nav-link active">Kategori Menu</a>
@@ -32,7 +32,7 @@
                 <a href="lokasi.html" class="nav-link">Lokasi</a>
                 <a href="tentang.html" class="nav-link">Tentang</a>
             </div>
-            
+
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" title="Ganti Tema">◐</button>
                 <a href="pesan.html" class="cart-icon" title="Keranjang">
@@ -46,7 +46,7 @@
         </div>
     </nav>
 
-    
+
     <section class="section" style="padding-top: 50px; padding-bottom: 30px;">
         <div class="container">
             <div class="section-header scroll-reveal">
@@ -54,8 +54,8 @@
                 <p>Eksplorasi beragam masakan tradisional Minahasa yang otentik dan kaya rempah.</p>
                 <div class="accent-line"></div>
             </div>
-            
-            
+
+
             <div class="filter-container scroll-reveal" id="menuFilters">
                 <button class="filter-btn active" data-filter="semua">Semua</button>
                 <button class="filter-btn" data-filter="makanan-utama">Makanan Utama</button>
@@ -68,17 +68,17 @@
         </div>
     </section>
 
-    
+
     <section class="section" style="padding-top: 0;">
         <div class="container">
             <div class="menu-grid" id="menuGrid">
-                
+
                 <p style="text-align: center; width: 100%; color: var(--text-muted);">Memuat menu...</p>
             </div>
         </div>
     </section>
 
-    
+
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
@@ -87,7 +87,7 @@
         </div>
     </footer>
 
-    
+
     <div class="modal-backdrop" id="menuModal">
         <div class="modal-content">
             <button class="modal-close" id="closeModal">✕</button>
@@ -99,10 +99,10 @@
                 </div>
                 <h2 id="modalNama">Nama Menu</h2>
                 <p id="modalDesc" style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 25px;"></p>
-                
+
                 <h4 style="color: var(--primary); margin-bottom: 8px;">Cerita & Sejarah</h4>
                 <p id="modalSejarah" style="margin-bottom: 25px; line-height: 1.7;"></p>
-                
+
                 <h4 style="color: var(--primary); margin-bottom: 8px;">Bahan Utama</h4>
                 <ul id="modalBahan" style="list-style-type: disc; margin-left: 20px; line-height: 1.8;">
                 </ul>
@@ -110,7 +110,7 @@
         </div>
     </div>
 
-    
+
     <script src="js/navbar.js"></script>
     <script src="js/animasi.js"></script>
     <script src="js/data_menu.js?v=2"></script>

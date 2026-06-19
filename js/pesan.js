@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             addBtn.addEventListener('click', () => {
                 addToCart(item, parseInt(input.value));
-                input.value = 1; 
+                input.value = 1;
             });
             productGrid.appendChild(card);
         });
@@ -148,8 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if(checkoutForm) {
         checkoutForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // Ambil data dari formulir
+
+
             const nama = document.getElementById('coNama').value;
             const telp = document.getElementById('coTelp').value;
             const alamat = document.getElementById('coAlamat').value;
@@ -157,15 +157,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const provinsi = document.getElementById('coProvinsi').value;
             const ekspedisiSelect = document.getElementById('coEkspedisi');
             const ekspedisi = ekspedisiSelect.options[ekspedisiSelect.selectedIndex].text;
-            
+
             const btn = checkoutForm.querySelector('button[type="submit"]');
             btn.textContent = 'Memproses...';
             btn.disabled = true;
-            
+
             setTimeout(() => {
                 const orderNum = '#WM' + Math.floor(10000 + Math.random() * 90000);
-                
-                // Hitung total belanja
+
+
                 let subtotal = 0;
                 let barangTeks = '';
                 cart.forEach(item => {
@@ -175,8 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 const ongkir = 25000;
                 const total = subtotal + ongkir;
-                
-                // Simpan transaksi ke LocalStorage (woku_orders)
+
+
                 const orderData = {
                     orderNumber: orderNum,
                     nama: nama,
@@ -191,15 +191,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     total: total,
                     tanggal: new Date().toISOString()
                 };
-                
+
                 let allOrders = JSON.parse(localStorage.getItem('woku_orders') || '[]');
                 allOrders.push(orderData);
                 localStorage.setItem('woku_orders', JSON.stringify(allOrders));
-                
-                // Susun pesan WhatsApp
-                const waNumber = '6281122334455'; // Nomor WhatsApp Admin / Penjual
+
+
+                const waNumber = '6281122334455';
                 const waMessage = `Halo Woku Manado, saya ingin mengirimkan rincian pesanan.
-                
+
 *Detail Pengiriman:*
 Nomor Pesanan: *${orderNum}*
 Nama Penerima: *${nama}*
@@ -214,27 +214,27 @@ ${barangTeks}
 *Total Pembayaran:* *Rp ${total.toLocaleString('id-ID')}*
 
 Mohon bantuannya untuk diproses. Terima kasih!`;
-                
+
                 const waUrl = `https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(waMessage.replace(/^[ \t]+/gm, ''))}`;
-                
-                // Pasang link ke tombol di halaman sukses
+
+
                 const btnWA = document.getElementById('btnWhatsAppRedirect');
                 if (btnWA) {
                     btnWA.href = waUrl;
                 }
-                
-                // Bersihkan keranjang
+
+
                 cart = [];
                 saveCart();
                 renderCart();
                 if(window.updateGlobalCartBadge) window.updateGlobalCartBadge();
-                
-                // Sembunyikan form dan tampilkan sukses
+
+
                 checkoutForm.style.display = 'none';
                 checkoutSuccess.style.display = 'block';
                 document.getElementById('orderNumber').textContent = orderNum;
-                
-                // Coba buka WhatsApp otomatis di tab baru
+
+
                 window.open(waUrl, '_blank');
             }, 1500);
         });

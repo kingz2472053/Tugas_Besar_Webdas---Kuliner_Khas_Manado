@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(slides.length === 0) return;
     let currentSlide = 0;
     let slideInterval;
-    const intervalTime = 5000; 
+    const intervalTime = 5000;
     function showSlide(index) {
         slides.forEach(slide => slide.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.addEventListener('click', () => {
             const index = parseInt(dot.getAttribute('data-index'));
             showSlide(index);
-            startSlide(); 
+            startSlide();
         });
     });
     showSlide(0);

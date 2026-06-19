@@ -10,7 +10,7 @@
     .form-row { grid-template-columns: 1fr; }
     .cart-layout { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
-    
+
     .cart-sidebar {
         position: static;
         margin-top: 40px;
@@ -24,7 +24,7 @@
     .nav-brand {
         font-size: 1.5rem;
     }
-    
+
     .nav-menu {
         position: absolute;
         top: 70px;
@@ -40,21 +40,21 @@
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: clip-path 0.4s ease;
     }
-    
+
     .nav-menu.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-    
+
     .hamburger { display: flex; }
-    
+
     .hero-content h1 { font-size: 2.2rem; }
     .hero-content p { font-size: 1rem; }
-    
+
     .section { padding: 50px 0; }
     .section-header h2 { font-size: 2rem; }
-    
+
     .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-    
+
     .menu-grid, .product-grid {
         grid-template-columns: 1fr;
     }
@@ -65,7 +65,7 @@
     .btn-primary { width: 100%; text-align: center; }
     .btn-outline { width: 100%; text-align: center; }
     .hero-actions { flex-direction: column; }
-    
+
     .form-container {
         padding: 20px;
     }
